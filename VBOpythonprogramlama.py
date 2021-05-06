@@ -182,8 +182,6 @@ print()
 
 
 #VERI YAPILARI - Listeler
-<<<<<<< Updated upstream
-=======
 
 # 1-Kapsayıcıdır
 # 2-Değiştirilebilir
