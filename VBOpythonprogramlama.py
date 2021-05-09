@@ -615,24 +615,405 @@ set1.intersection_update(set2)
 set1
 
 
+#Set Sorgu Islemleri
+
+
+set1 = set([7,8,9])
+set2 = set([5,6,7,8,9,10])
+
+
+# iki kumenin kesisiminin bos olup 
+# olmadiginin sorgulanması
+
+set1.isdisjoint(set2)
+
+
+<<<<<<< Updated upstream
+=======
+#bir kumenin butun elemanlarinin baska bir kume
+#icerisinde yer alıp almadıgı
+
+set1.issubset(set2)
+
+
+#bir kumenin bir diger kumeyi kapsayıp kapsamadıgı
+
+set2.issuperset(set1)
 
 
 
+#Veri Yapıları - özet
+
+#Listeler: Değiştirilebilir
+#          Sıralıdır
+#          Kapsayıcıdır
+
+#Tuple:    Değiştirilemez
+#          Sıralıdır
+#          Kapsayıcıdır
+
+#Sözlük:   Değiştirilebilir
+#          Sırasızdır
+#          Kapsayıcıdır
+
+#Setler:   Değiştirilebilir
+#          Sırasız + Eşsizdir
+#          Kapsayıcıdır
 
 
 
+# FONKSİYONLARA GIRIS VE FONKSİYON OKURYAZIRLIGI
+
+
+print("A","B",sep="_")
+?print
+print()
+
+len("a")
+
+
+#Matematiksel Islemler
+
+4*4
+4/4
+5-1
+6+3
+3**2
+
+
+#Fonksiyon Nasil Yazilir?
+
+4**2
+
+def kare_al(x):
+    print(x**2)
+
+kare_al(5)
+
+
+#Bilgi Notuyla Cikti Uretmek
+
+def kare_al(x):
+    print(x**2)
+
+kare_al(5)
+
+def kare_al(x):
+    print("Girilen Sayinin Karesi:" + str(x**2))
+
+kare_al(3)
+
+
+def kare_al(x):
+    print("Girilen Sayi:" + str(x) + " Karesi:" + str(x**2))
+
+kare_al(3)
+
+
+#Iki Argümanli Fonksiyon Tanimlamak
+
+def kare_al(x):
+    print(x**2)
+    
+
+def carpma_yap(x,y):
+    print(x*y)
+    
+carpma_yap(3,5)
+
+
+#On Tanımlı Argumanlar
+
+?print
+
+def carpma_yap(x,y=4):
+    print(x*y)
+    
+carpma_yap(3)
+
+print("HELLO AI ERA")
+
+#Argumanlarin Siralamasi
+
+def carpma_yap(x, y=1):
+    print(x*y)
+
+carpma_yap(y = 2, x = 3)
+
+carpma_yap(2,3)
+
+
+#Ne Zaman Fonksiyon Yazilir?
+
+#!Fonksiyonlar, sık tekrar eden ya da uzun işlemlerden kurtulmak adına yazdığımız şeylerdir.
+
+def direk_hesap(isi, nem, sarj):
+    print((isi + nem) / sarj)
+
+direk_hesap(25,40,70)
+
+
+#Ciktiyi Girdi Olarak Kullanmak
+
+def direk_hesap(isi, nem, sarj):
+    print((isi + nem)/sarj)
+    
+cikti = direk_hesap(25,40,70)
+cikti
+print(cikti)
+direk_hesap(25,40,70)*9
+
+
+#!Yazmış oldugumuz bir fonksiyonun çıktısını başka bir işlemin girdisi olarak 
+#kullanmak istiyorsak return ifadesini kullanıyoruz.
+
+def direk_hesap(isi, nem, sarj):
+    return (isi + nem)/sarj
+
+cikti = direk_hesap(25,40,70)
+cikti
+print(cikti)
+
+
+def direk_hesap(isi, nem, sarj):
+    return 
+    (isi + nem)/sarj
+
+direk_hesap(25,40,70)
 
 
 
+#Local ve Global Degiskenler
+
+x = 10                                 # Global degiskenler                      
+y = 20
+
+
+def carpma_yap(x = 2, y = 1):          # Local degiskenler
+    return x*y
+
+carpma_yap(2,3)
+
+
+#Local Etki Alanindan Global Etki Alanini Degistirmek
+
+x = []
+
+def eleman_ekle(y):
+    x.append(y)
+    print(str(y) + " ifadesi eklendi")
+    
+eleman_ekle("ali")
+eleman_ekle("mustafa")
+
+x
 
 
 
+# KARAR & KONTROL YAPILARI
+
+#True-False Sorgulamaları
+
+sinir = 5000
+sinir == 4000
+sinir == 5000
+
+5 == 4
+5 == 5 
+
+
+#if 
+
+
+sinir = 50000
+gelir = 60000
+
+gelir < sinir
+
+if gelir < sinir:
+    print("Gelir sinirdan kucuk")
+    
+    
+if gelir > sinir:
+    print("Gelir sinirdan kucuk")
+
+
+#else
+
+sinir = 50000
+gelir = 35000
+
+if gelir > sinir:
+    print("Gelir sinirdan buyuk")
+else:
+    print("Gelir sinirdan kucuk")
+
+
+#diger ornek
+sinir = 50000
+gelir = 51000
+
+if gelir == sinir:
+    print("Gelir sinira eşittir.")
+else:
+    print("Gelir sinira eşit degildir.")
+
+
+#elif
+
+sinir = 50000
+gelir1 = 60000
+gelir2 = 50000
+gelir3 = 35000
+
+if gelir1 > sinir:
+    print("Tebrikler, hediye kazandınız.")
+elif gelir1 < sinir:
+    print("Uyari!")
+else:
+    print("Takibe devam")
+
+
+if gelir3 > sinir:
+    print("Tebrikler, hediye kazandınız.")
+elif gelir3 < sinir:
+    print("Uyari!")
+else:
+    print("Takibe devam")
+
+
+if gelir2 > sinir:
+    print("Tebrikler, hediye kazandınız.")
+elif gelir2 < sinir:
+    print("Uyari!")
+else:
+    print("Takibe devam")
 
 
 
+#mini uygulama
+
+sinir = 50000
+magaza_adi = input("Magazanin adını girin: ")
+magaza_gelir = int(input("Magazanin gelirini girin: "))
+
+if magaza_gelir > sinir:
+    print("Tebrikler," + magaza_adi + " promosyon kazandınız!")
+elif magaza_gelir < sinir:
+    print("Uyari! Çok dusuk gelir: " + str(magaza_gelir))
+else:
+    print("Takibe devam")    
 
 
 
+# DONGULER - for
 
+#Verilen listenin her bir elemanını iteratif bir şekilde yakalayıp belirli bir 
+#işleme tabi tutmak için for dongusu kullanılır.
+
+
+ogrenci = ["ali","veli","isik","berk"]
+
+for i in ogrenci:
+    print(i)
+
+
+maaslar  = [1000,2000,3000,4000,5000]
+
+for maas in maaslar:
+    print(maas*1/2)
+
+
+for i in range(0,10):
+    print(i)
+
+#dongu ve fonksiyonları birlikte kullanmak
+
+def kare_al(x):
+    print(x**2)
+
+kare_al(2)
+
+maaslar = [1000,2000,3000,4000,5000]
+
+for i in maaslar:
+    print(i)
+
+
+#Ornek: maaslara yuzde 20 zam yapılacak gerekli kodları yaziniz.
+
+1000*20/100 + 1000
+
+maaslar[0]*20/100 + maaslar[0]
+maaslar[1]*20/100 + maaslar[1]
+maaslar[2]*20/100 + maaslar[2]
+
+#bir şeyi çok tekrar edeceğimiz için döngü yazilacak
+#bazı matematik işlemler yapagımız içinde fonksiyonlar kullanıcaz
+
+def yeni_maas(x):
+   print(x*20/100 + x)
+
+yeni_maas(1000)
+yeni_maas(2000)
+yeni_maas(3000)
+
+
+for i in maaslar:
+     yeni_maas(i)
+
+
+#Ornek2: if, for ve fonksiyonları birlikte kullanmak
+
+maaslar = [1000,2000,3000,4000,5000]
+
+def maas_ust(x):
+    print(x*10/100 + x)
+
+def maas_alt(x):
+    print(x*20/100 + x)
+    
+for i in maaslar:
+    if i >= 3000:
+        maas_ust(i)
+        
+    else:
+        maas_alt(i)
+>>>>>>> Stashed changes
+
+
+
+#break & continue
+#break: Bir dongu bloku  icinde verilen bir break komutu, dongunun hemen o anda bitmesine yol acar.
+#continue: Türkcedeki anlamı “devam” etmek olan bu deyim, verilen kodu calıstırmadan bi sonraki koda geçer.
+
+maaslar = [8000,5000,2000,1000,3000,7000,1000]
+
+dir(maaslar)
+
+maaslar.sort()
+maaslar
+
+for i in maaslar:
+    if i == 3000:
+        print("kesildi")
+        break
+    print(i)
+    
+
+for i in maaslar:
+    if i == 3000:
+        continue
+    print(i)
+    
+
+
+#While loop
+
+sayi = 1
+
+while sayi < 10:
+    sayi  += 1
+    print(sayi)
 
 
