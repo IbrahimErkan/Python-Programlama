@@ -1013,7 +1013,73 @@ for i in maaslar:
 sayi = 1
 
 while sayi < 10:
-    sayi  += 1
+    sayi += 1
     print(sayi)
+
+
+
+
+#OOP - NESNE YONELİMLİ PROGRAMLAMA
+
+#Nesne Tabanlı Programlama gerçek hayattaki nesneleri yazılım dünyasına aktarma çabasıdır. 
+#Örneğin yeni bir araba üretecek bir firmayı düşünelim. Somut olarak üretilecek olan arabanın
+#tüm özellik (attributes) ve fonksiyonlarını (method) ilk olarak yazılıma aktarmak gerekiyor. 
+#Bu aktarım aşamasının kendisi aslında arabanın tüm özellik ve fonksiyonlarını içerecek olan 
+#bir sınıfın (class) oluşturmasıdır. Sınıf tanımlanmasından sonra ise sınıfın tüm özellik ve 
+#yeteneklerine sahip olacak her kopyaya ise nesne (object) diyoruz.
+
+
+#Class - Sınıf: Benzer özellikler, ortak amaclar tasıyan, icerisinde metod ve degiskenler olan yapılardır.
+
+class VeriBilimci():
+    print("Bu bir sınıftır")
+
+#Sinif Ozellikleri (Class attributes)
+
+class VeriBilimci():
+    bolum = ''
+    sql = 'Evet'
+    deneyim_yili = 0
+    bildigi_diller = []
+
+#Siniflarin ozelliklerine erismek
+VeriBilimci.bolum
+VeriBilimci.sql
+
+#Siniflarin ozelliklerini degistirmek
+VeriBilimci.sql = "Hayır"
+VeriBilimci.sql
+
+#Sinif Orneklendirmesi (instantiation)
+
+ali = VeriBilimci()
+
+ali.sql
+ali.deneyim_yili
+ali.bolum
+ali.bildigi_diller.append("Python")
+ali.bildigi_diller
+
+veli = VeriBilimci()
+veli.sql
+veli.bildigi_diller
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
