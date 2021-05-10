@@ -1,3 +1,5 @@
+#03.05.2021
+
 #SAYILAR VE STRINGLERE GIRIS
 
 9
@@ -15,7 +17,6 @@ type("HELLO AI ERA")
 
 
 #STRİNGLERE YAKINDAN BAKALIM
-
 
 ""
 ''
@@ -1134,6 +1135,7 @@ veli.bildigi_diller
 
 
 #Miras Yapilari (inheritance)
+#Var olan sınıfların ozelliklerini baska sınıflar için kullanmak icin miras yapilarini kullaniriz.
 
 class Employees():
     def __init__(self):
@@ -1167,6 +1169,8 @@ mar1.
 
 
 #Yan Etkisiz Fonksiyonlar (Pure Functions)
+
+#bir girdi verildiğinde çıktı üreten fonksiyonlardır.
 
 #Ornek1:Bagimsizlik
 
@@ -1249,21 +1253,78 @@ reduce(lambda a,b: a + b, liste)
 
 
 
+#Modul Olusturmak
+
+#Belirli amacları yerine getirmek icin bir arada bulunan fonksiyonlar toplulugudur.
+
+
+#HesapModulu.py
+def yeni_maas(x):
+    print(x*20/100 + x)
+
+maaslar  = [1000,2000,3000,4000]
+
+#test
+import HesapModulu
+HesapModulu.yeni_maas(1000)
+
+import HesapModulu as hm
+hm.yeni_maas(2000)
+
+from HesapModulu import yeni_maas
+yeni_maas(3000)
+
+import HesapModulu as hm
+hm.maaslar
 
 
 
+#Hatalar / istisnalar (Exceptions)
+
+# 1-ZeroDivisionError hatasi
+
+a = 10
+b = 0
+
+a/b
+
+
+try:
+    print(a/b)
+except ZeroDivisionError:
+    print("Payda da sifir olmaz")
+
+
+# 2-TypeError - tip hatasi
+
+a = 10
+b = "2"
+
+a/b
+
+try:
+    print(a/b)
+except TypeError:
+    print("Sayi ve string problemi")
 
 
 
+a = 10
+b = 2
+
+a/b
+
+try:
+    print(a/b)
+except TypeError:
+    print("Sayi ve string problemi")
 
 
 
-
-
-
-
-
-
+# Benden tüm okuyuculara,  hayatta ya da kodlarda karsılasacagınız tüm problemleri cözmeye calısın, 
+# bu size verebilecegim en degerli tavsiye. Mutlaka problemlerinizi kendiniz cözmeye calısın cünkü  
+# bu dünya yapısal olmayan ve problemlerle dolu bi dünya. :)
+# 10.05.2021
 
 
 
